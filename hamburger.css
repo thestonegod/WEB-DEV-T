@@ -23,14 +23,15 @@ span{
 }
 /*Animation*/
 .hamburger.active span:nth-child(1) {
-    transform: translate(6px 6px);
+    transform: rotate(45deg)
+    translate(6px, 6px);
 }
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
 .hamburger.active span:nth-child(3){
     transform: rotate(-45deg)
-    translate(7px -6px);
+    translate(7px, -6px);
 }
 /*Dropdown*/
 .menu{
@@ -41,7 +42,27 @@ span{
     transition: max-height 0.4s ease;
     text-align: center;
 }
-.menu .open{
+.sub-menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.sub-menu li a{
+    color: black;
+    font-size: 16px;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+}
+.sub-menu li a:hover{
+    color: white;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+.menu.open{
     max-height: 200px;
 }
 .menu ul{
@@ -60,6 +81,14 @@ span{
     padding: 15px 0;
 }
 .menu li a:hover{
-    color: crimson;
+    color: blue;
 
+  }
+  .dropdown.open-sub-menu .sub-menu{
+    max-height: 200px;
+  }
+  @media (min-width:768px) {
+    .dropdown:hover .sub-menu {
+        max-height: 200px;
+    }
   }

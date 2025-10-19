@@ -8,22 +8,51 @@
 </head>
 <body>
       <div class="hamburger" 
-        onclick="toggleMenu">
+        onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <nav class="menu">
         <ul>
-          <li> <a href="#">Home</a> </li>
-          <li> <a href="#">About</a> </li>
-          <li> <a href="#">Services</a> </li>
+          <li class="dropdown"> <a href="#">Home</a>
+
+            <ul class="sub-menu">
+              <li> <a href="#">Submenu 1</a> </li>
+              <li> <a href="#">Submenu 2</a> </li>
+            </ul>
+          
+          </li>
+          <li  class="dropdown"> <a href="#">About</a>
+            <ul class="sub-menu">
+              <li> <a href="#">Team</a> </li>
+              <li> <a href="#">Mission</a> </li>
+            </ul>
+          
+          </li >
+          <li class="dropdown"> <a href="#">Services</a>
+            <ul class="sub-menu">
+              <li> <a href="#">Web Design</a> </li>
+              <li> <a href="#">SEO</a> </li>
+            </ul>
+          
+          </li>
         </ul>
       </nav>
+
       <script>
-        function toggleMenu() {
-          document.querySelector( '.hamburger' ).classList.toggle('active');
-          document.querySelector( '.menu' ).classList.toggle('open');}
+       function toggleMenu() {
+       document.querySelector( '.hamburger' ).classList.toggle('active');
+        document.querySelector( '.menu' ).classList.toggle('open');}
+        // For mobile: open dropdowns on click
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault(); //stops the page from jumping to the top
+            const dropdown =
+            link.parentElement;
+            dropdown.classList.toggle('open-sub-menu');
+          })
+        });
       </script>
 </body>
 </html>
