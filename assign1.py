@@ -1,0 +1,13 @@
+print ("Welcome to Kofi's market helper!")
+shop_keeper = input ("Enter shop keepr's name: ")
+price = input ("Price of item: ")
+quantity = input ("Quantity of item: ")
+amount_recieved = input ("Amount received from customer: ")
+total_cost = float(price) * int(quantity)
+change = float(amount_recieved) - total_cost
+print (f"shop_keeper's name: {shop_keeper}")
+print (f"Price of item: {price}")
+print (f"Quantity of item: {quantity}")
+print (f"Amount received: {amount_recieved}")gi
+print (f"Total cost: {total_cost}")
+print (f"Change: {change}")
