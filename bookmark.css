@@ -104,26 +104,8 @@ body {
   background: var(--blue);
 }
 
-@media (min-width: 1024px) {
-  .nav {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-  }
-  .nav ul {
-    flex-direction: row;
-  }
-  .login-btn {
-    margin-top: 0;
-  }
-  .menu-toggle {
-    display: none;
-  }
-}
 
+/*Hero*/
 .hero {
   display: flex;
   flex-direction: column-reverse;
@@ -353,7 +335,7 @@ body {
   color: #ccc;
 }
 
-/* Desktop - media query at the end */
+/* Desktop - media query */
 @media (min-width: 1024px) {
   .header {
     padding: 2rem 0;
@@ -365,6 +347,23 @@ body {
     text-align: left;
     gap: 3rem;
     padding: 2rem;
+  }
+  .nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .nav ul {
+    flex-direction: row;
+  }
+  .login-btn {
+    margin-top: 0;
+  }
+  .menu-toggle {
+    display: none;
   }
   .hero__content {
     flex: 1 1 60%;
