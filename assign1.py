@@ -8,6 +8,6 @@ change = float(amount_recieved) - total_cost
 print (f"shop_keeper's name: {shop_keeper}")
 print (f"Price of item: {price}")
 print (f"Quantity of item: {quantity}")
-print (f"Amount received: {amount_recieved}")gi
+print (f"Amount received: {amount_recieved}")
 print (f"Total cost: {total_cost}")
 print (f"Change: {change}")
