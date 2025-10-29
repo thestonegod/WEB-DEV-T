@@ -130,6 +130,7 @@ body {
   margin-bottom: 2rem;
   color: var(--dark-blue);
 }
+/*Hero buttons*/
 .hero__buttons {
   display: flex;
   gap: 1rem;
@@ -145,6 +146,7 @@ body {
   border: none;
   cursor: pointer;
   outline: none;
+  display: flex;
 }
 .btn--chrome {
   background: var(--blue);
@@ -173,7 +175,7 @@ body {
 }
 .blue-bg {
   background: var(--blue);
-  border-radius: 0 0 100px 100px;
+  border-radius: 130px 0 0 130px;
   padding: 2rem 1rem 1rem 1rem;
   margin-bottom: 1.5rem;
   width: 100%;
@@ -187,58 +189,69 @@ body {
   display: block;
 }
 
-.features {
-  max-width: var(--max-width);
-  margin: 3rem auto;
-  padding: 1rem;
-  text-align: center;
-}
-.features h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-.feature-list {
+/*Bookmark organization*/
+.organization {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.feature-item {
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
-}
-.feature-item img {
-  width: 40px;
-  margin-bottom: 1rem;
-}
-.feature-item h3 {
-  font-size: 1.125rem;
-  margin-bottom: 0.7rem;
-  font-weight: 500;
-}
-.feature-item p {
-  font-size: 1rem;
-  color: var(--dark-blue);
-}
-
-.pricing {
   max-width: var(--max-width);
-  margin: 3rem auto;
+  margin: 2rem auto 0 auto;
   padding: 1rem;
+}
+.organization__content {
   text-align: center;
+  flex: 1;
+}
+.organization__image {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.organization__image .blue-bg {
+  background: var(--blue);
+  border-radius: 130px 0 0 130px;
+  padding: 2rem 1rem 1rem 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.organization__image .blue-bg img {
+  max-width:  300px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*More info button*/
+.organization__button {
+  visibility: hidden;
+}
+.organization__button a {
+  text-decoration: none;
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.more-info:hover,
+.more-info:focus {
+  background: var(--red);
 }
 
 .contact {
-  max-width: var(--max-width);
-  margin: 3rem auto;
-  padding: 1rem;
+  margin: 0 auto;
   text-align: center;
+  background-color: var(--blue);
+  color: #fff;
+  padding: 2rem 1rem;
+  letter-spacing: 2.5px;
 }
 .newsletter {
   display: flex;
@@ -258,7 +271,7 @@ body {
   background: var(--red);
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 6.3rem;
   border-radius: var(--radius);
   font-size: 1rem;
   font-weight: 500;
@@ -286,11 +299,10 @@ body {
   white-space: nowrap;
   border: 0; padding: 0; margin: -1px;
 }
-
+/*Footer*/
 .footer {
   background: var(--dark-blue);
   color: #fff;
-  margin-top: 4rem;
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -374,25 +386,46 @@ body {
     text-align: right;
   }
   .blue-bg {
-    border-radius: 100px 0 0 100px;
+    border-radius: 140px 0 0 140px;
     padding: 3rem 3rem 2rem 2rem;
     margin-bottom: 0;
   }
   .blue-bg img {
     max-width: 420px;
   }
-  .features {
+
+  /*Bookmark organization*/
+  .organization {
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    gap: 3rem;
     padding: 2rem;
   }
-  .feature-list {
+  .organization__content {
+    flex: 1 1 40%;
+    text-align: left;
+  }
+  .organization__image {
+    flex: 1 1 20%;
+  }
+  .organization__image .blue-bg {
+  border-radius: 0 140px 140px 0;
+  }
+  .organization__button  {
+    visibility: visible;
+    padding-top: 2rem;
+  }
+
+  /*Stay up-to-date*/
+  .newsletter {
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
   }
-  .feature-item {
-    min-width: 220px;
-    max-width: 330px;
+  .newsletter button {
+      padding: 0.8rem 2rem;
   }
+  /*Footer*/
   .footer__nav {
     flex-direction: row;
     justify-content: space-between;
