@@ -66,6 +66,74 @@
        
     </section>
 
+     <!-- FAQ Section -->
+<section class="faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq__intro">
+    Here are some of our FAQs. If you have any other questions you'd like answered,
+    please feel free to email us.
+  </p>
+
+  <div class="faq__list">
+    <div class="faq__item">
+      <button class="faq__question">
+        What is Bookmark?
+        <span class="faq__icon">+</span>
+      </button>
+      <div class="faq__answer">
+        <p>
+          Bookmark is a simple and clean interface for managing your favourite websites.
+          You can easily organize, access, and sync your bookmarks across all devices.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question">
+        How can I request a new browser?
+        <span class="faq__icon">+</span>
+      </button>
+      <div class="faq__answer">
+        <p>
+          You can reach out to our team through the contact form. We review all requests
+          and add new browsers based on demand.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question">
+        Is there a mobile app?
+        <span class="faq__icon">+</span>
+      </button>
+      <div class="faq__answer">
+        <p>
+          Not yet — but our team is currently working on a mobile version for both iOS and Android.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question">
+        What about other Chromium browsers?
+        <span class="faq__icon">+</span>
+      </button>
+      <div class="faq__answer">
+        <p>
+          Yes, Bookmark works seamlessly with most Chromium-based browsers like Edge, Brave, and Opera.
+        </p>
+      </div>
+    </div>
+
+    <a href="#" class="btn-faq">More Info</a>    
+  </div>
+</section>
+
+    
+
+    
+
+
 
 
       <!--Newsletter-->
@@ -125,6 +193,14 @@
         email.classList.add('input-error');
         e.preventDefault();
       }
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq__question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
     });
 
     
