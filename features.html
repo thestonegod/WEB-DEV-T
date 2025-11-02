@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbbed features</title>
+    <link rel="stylesheet"  href="features.css">
+</head>
+<body>
+    <section class="features" id="features">
+    <h2>Features</h2>
+    <h3>Tabbed features layout</h3>
+    <p class="features__intro">
+      Our aim is to make your browsing experience effortless and organized.  
+      Here are some key features that make Bookmark stand out.
+    </p>
+
+    <div class="features__tabs">
+      <button class="tab active" data-tab="simple">Simple Bookmarking</button>
+      <button class="tab" data-tab="speedy">Speedy Searching</button>
+      <button class="tab" data-tab="sharing">Easy Sharing</button>
+    </div>
+
+    <div class="features__content active" id="simple">
+      <h3>Bookmark in One Click</h3>
+      <p>
+        Organize your bookmarks however you like. Our simple interface gives you complete control 
+        over how you manage your favourite sites.
+      </p>
+    </div>
+
+    <div class="features__content" id="speedy">
+      <h3>Intelligent Search</h3>
+      <p>
+        Our powerful search feature helps you find saved sites in seconds.  
+        No need to scroll through endless links.
+      </p>
+    </div>
+
+    <div class="features__content" id="sharing">
+      <h3>Share Effortlessly</h3>
+      <p>
+        Share your bookmarks and collections with friends and colleagues — all with a single click.
+      </p>
+    </div>
+</section>
+
+<section class="features-alt" id="features-alt">
+  <h2>Features</h2>
+  <p class="features-alt__intro">
+    Our aim is to make it quick and easy for you to access your favourite websites. 
+    Your bookmarks sync across your devices, so you can access them on the go.
+  </p>
+
+  <div class="features-alt__grid">
+    <div class="feature__card">
+      <h3>Simple Bookmarking</h3>
+      <p>
+        Organize your bookmarks however you like. Easily drag, drop, and categorize 
+        your favourite sites in a few clicks.
+      </p>
+    </div>
+
+    <div class="feature__card">
+      <h3>Speedy Searching</h3>
+      <p>
+        Find your saved sites quickly with our powerful search feature. 
+        No more endless scrolling to locate your favourites.
+      </p>
+    </div>
+
+    <div class="feature__card">
+      <h3>Easy Sharing</h3>
+      <p>
+        Share your bookmarks and collections with friends effortlessly. 
+        Collaboration made simple and intuitive.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script >
+    // Features tab switching
+const tabs = document.querySelectorAll(".tab");
+const contents = document.querySelectorAll(".features__content");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    contents.forEach(c => c.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
+});
+</script>
+
+    
+</body>
+</html>

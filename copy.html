@@ -46,6 +46,45 @@
       </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="features" id="features">
+    <h2>Features</h2>
+    <p class="features__intro">
+      Our aim is to make your browsing experience effortless and organized.  
+      Here are some key features that make Bookmark stand out.
+    </p>
+
+    <div class="features__tabs">
+      <button class="tab active" data-tab="simple">Simple Bookmarking</button>
+      <button class="tab" data-tab="speedy">Speedy Searching</button>
+      <button class="tab" data-tab="sharing">Easy Sharing</button>
+    </div>
+
+    <div class="features__content active" id="simple">
+      <h3>Bookmark in One Click</h3>
+      <p>
+        Organize your bookmarks however you like. Our simple interface gives you complete control 
+        over how you manage your favourite sites.
+      </p>
+    </div>
+
+    <div class="features__content" id="speedy">
+      <h3>Intelligent Search</h3>
+      <p>
+        Our powerful search feature helps you find saved sites in seconds.  
+        No need to scroll through endless links.
+      </p>
+    </div>
+
+    <div class="features__content" id="sharing">
+      <h3>Share Effortlessly</h3>
+      <p>
+        Share your bookmarks and collections with friends and colleagues all with a single click.
+      </p>
+    </div>
+</section>
+
+
     <section class="organization">
       <div class="organization__content">
         <h1>Bookmark in one click</h1>
@@ -203,6 +242,20 @@
       });
     });
 
+        // Features tab switching
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".features__content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+    });
+    
     
   </script>
 </body>

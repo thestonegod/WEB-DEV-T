@@ -1,0 +1,134 @@
+.features {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.features h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(229, 31%, 21%);
+}
+
+.features__intro {
+  color: hsl(229, 8%, 60%);
+  max-width: 600px;
+  margin: 1rem auto 3rem;
+  line-height: 1.6;
+}
+
+.features__tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid hsl(229, 8%, 80%);
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: hsl(229, 8%, 60%);
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.tab:hover {
+  color: hsl(0, 94%, 66%);
+}
+
+.tab.active {
+  color: hsl(231, 69%, 60%);
+  border-color: hsl(231, 69%, 60%);
+}
+
+.features__content {
+  display: none;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.features__content.active {
+  display: block;
+}
+
+.features__content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: hsl(231, 69%, 60%);
+}
+
+.features__content p {
+  color: hsl(229, 8%, 60%);
+  line-height: 1.7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.features-alt {
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.features-alt h2 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+.features-alt__intro {
+  color: hsl(229, 8%, 50%);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.features-alt__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature__card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.feature__card h3 {
+  color: var(--blue);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.feature__card p {
+  color: hsl(229, 8%, 50%);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
