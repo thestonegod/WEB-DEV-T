@@ -325,6 +325,87 @@ body {
   background: var(--red);
 }
 
+.download {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.download h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.download__intro {
+  color: var(--p-color);
+  max-width: 600px;
+  margin: 1rem auto 3rem;
+  line-height: 1.6;
+}
+
+.download__cards {
+  display: grid;
+  gap: 2rem;
+}
+
+.download__card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.download__card:hover {
+  transform: translateY(-5px);
+}
+
+.download__card img {
+  width: 70px;
+  margin-bottom: 1rem;
+}
+
+.download__card h3 {
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.download__card p {
+  color: var(--p-color);
+  font-size: 0.95rem;
+}
+
+.download__dots {
+  background: url('bookmark images/bg-dots.svg') repeat-x center;
+  height: 4px;
+  width: 100%;
+  margin: 1.5rem 0;
+  opacity: 0.5;
+}
+
+.install-btn {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.install-btn:hover {
+  background: var(--red);
+}
+
 /* FAQ Section */
 .faq {
   max-width: var(--max-width);
@@ -606,6 +687,20 @@ body {
     padding-top: 2rem;
   }
 
+  /*Download Extension */
+  .download__cards {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+
+  .download__card:nth-child(2) {
+    margin-top: 2rem;
+  }
+
+  .download__card:nth-child(3) {
+    margin-top: 4rem;
+  }
+
   /*Stay up-to-date*/
   .newsletter {
     flex-direction: row;
@@ -623,4 +718,8 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
   }
+
+  .footer__nav ul {
+  flex-direction: row;
+}
 }
