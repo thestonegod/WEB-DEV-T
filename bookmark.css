@@ -215,7 +215,6 @@ body {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid hsl(229, 8%, 80%);
 }
 
 .tab {
@@ -225,7 +224,7 @@ body {
   padding: 1rem 2rem;
   cursor: pointer;
   color: hsl(229, 8%, 60%);
-  border-bottom: 3px solid transparent;
+  border-bottom: 1px hsl(229, 8%, 80%) solid;
   transition: color 0.3s, border-color 0.3s;
 }
 
@@ -234,11 +233,12 @@ body {
 }
 
 .tab.active {
-  color: hsl(231, 69%, 60%);
-  border-color: hsl(231, 69%, 60%);
+  color: var(--blue);
+  border-color: var(--blue);
+  border-bottom: 3px var(--blue) solid;
 }
 
-features__content {
+.features__content {
   display: none;
   max-width: 600px;
   margin: 2rem auto 0;
@@ -415,6 +415,8 @@ features__content {
   font-weight: 500;
   cursor: pointer;
   transition: background var(--transition);
+  display: inline-block;
+  margin: 2rem auto 0;
 }
 .faq-info:hover,
 .faq-info:focus {
@@ -500,6 +502,7 @@ features__content {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  flex-direction: column;
 }
 .footer__nav ul li a {
   color: #fff;
@@ -571,6 +574,14 @@ features__content {
   .blue-bg img {
     max-width: 420px;
   }
+
+  .features__tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 
   /*Bookmark organization*/
   .organization {
