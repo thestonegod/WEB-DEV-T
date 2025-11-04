@@ -260,6 +260,19 @@ body {
   line-height: 1.7;
 }
 
+.features__item{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features__image img{
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -662,6 +675,15 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.features__item{
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  gap: 4rem;
+}
+
+fe
 
 
   /*Bookmark organization*/
